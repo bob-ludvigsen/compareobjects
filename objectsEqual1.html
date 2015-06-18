@@ -5,7 +5,22 @@
     <meta charset="utf-8">
     <script>
         function equals(obj1, obj2) {
-            // your code here
+
+            for(var prop in obj1){
+
+                    if (obj1[prop] !== obj2[prop]) {
+                        return false;
+                    }
+
+            }
+            for(var prop in obj2){
+                if (obj1[prop] !== obj2[prop]) {
+                    return false;
+
+                }
+            }
+
+            return true;
         }
 
         function Book(title, author, published, hasMovie) {
