@@ -6,20 +6,18 @@
     <script>
         function equals(obj1, obj2) {
 
+            //iterate obj1
             for(var prop in obj1){
 
-                    if (obj1[prop] !== obj2[prop]) {
-                        return false;
-                    }
-
-            }
-            for(var prop in obj2){
+                // compare the props in the two objects without typecasting one by one,
+                //and if it fails return false.
                 if (obj1[prop] !== obj2[prop]) {
                     return false;
-
                 }
+
             }
 
+            //if all is good return true
             return true;
         }
 
@@ -29,7 +27,7 @@
             this.published = published;
             this.hasMovie = hasMovie;
         }
-        var book1 = new Book("Harry Potter", "JK Rowling", 1999, true);
+        var book1 = new Book("Harry Potter", "JK Rowling", 1999,true);
         var book2 = new Book("Harry Potter", "JK Rowling", 1999, true);
         var book3 = new Book("The Adventures of Sherlock Holmes", "Sir Arthur Conan Doyle", 1892, true);
 
